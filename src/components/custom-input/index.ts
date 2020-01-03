@@ -9,14 +9,6 @@ export class CustomInput extends LitElement {
   @property({type : String})  
   value = '';
 
-  // STORE SPECIFIC PROPERTIES...
-  @property({type : Boolean})  
-  useStore = false;
-  @property({type: Function})
-  reducer;
-  @property({type: Object})
-  store;
-
   @property({type: Function})
   onkeyup;
   @property({type: Function})
@@ -25,9 +17,6 @@ export class CustomInput extends LitElement {
   onfocusout;
   
   render(){
-    if(this.store && this.useStore){
-      this.store.attachReducers({ [this.propPath]:this.reducer(this.propPath)});
-    }
   
     return html`
     <link rel="stylesheet" href="./custom-input.css">
