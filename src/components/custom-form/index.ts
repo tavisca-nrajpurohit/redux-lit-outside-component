@@ -1,8 +1,8 @@
 import './../custom-input';
 import {LitElement, html, property} from 'lit-element';
 import {store} from './../../store/store';
-import {ACTION_CUSTOM_INPUT_NOT_FOCUSSED,ACTION_CUSTOM_INPUT_VALUE_CHANGED,ACTION_CUSTOM_INPUT_IS_FOCUSSED} from './actions';
-import {reducer} from './reducer';
+import {ACTION_CUSTOM_INPUT_NOT_FOCUSSED,ACTION_CUSTOM_INPUT_VALUE_CHANGED,ACTION_CUSTOM_INPUT_IS_FOCUSSED} from './state/actions';
+import {reducer} from './state/reducer';
 import {connect} from 'pwa-helpers';
 
 export class CustomForm extends connect(store)(LitElement) {
